@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CA2D-js</title>
+    <script type="text/javascript" src="js/ca2d.js"></script>
+</head>
+<body>
+    <canvas id="main_canvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+        window.onload = function(){
+            var player = new CA2D();
+            player.init("main_canvas", 100, 100, "345/2/4");
+            player.run();
+        }
+    </script>
+</body>
+</html>

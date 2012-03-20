@@ -1,0 +1,11 @@
+product = {
+  :name => "ca2d",
+  :files => FileList["ca2d/*.js"],
+}
+
+task :default => "#{product[:name]}.js"
+
+desc "make #{product[:name]}.js"
+file "#{product[:name]}.js" => product[:files] do |t|
+  sh "cat #{product[:files]} > #{t.name}"
+end
